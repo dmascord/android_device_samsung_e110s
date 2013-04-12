@@ -40,6 +40,10 @@ TARGET_OTA_ASSERT_DEVICE := SGH-I727,skyrocket
 TARGET_KERNEL_CONFIG        := cyanogenmod_skyrocket_defconfig
 TARGET_KERNEL_SOURCE        := kernel/samsung/msm8660-common
 
+# Build rom with 4.6 and -O2
+TARGET_GCC_VERSION := 4.6
+TARGET_USE_O2 := true
+
 # cat /proc/emmc
 #dev:        size     erasesize name
 #mmcblk0p22: 00fffc00 00000200 "recovery"
