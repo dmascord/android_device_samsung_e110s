@@ -1,5 +1,8 @@
 $(call inherit-product, device/samsung/skyrocket/full_skyrocket.mk)
 
+# OVERLAY_TARGET adds overlay asset source
+OVERLAY_TARGET := pa_hdpi
+
 # Inherit some common Carbon stuff.
 $(call inherit-product, vendor/carbon/config/common_gsm.mk)
 
