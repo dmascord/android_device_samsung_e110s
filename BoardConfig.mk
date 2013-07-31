@@ -43,6 +43,9 @@ TARGET_KERNEL_SOURCE        := kernel/samsung/msm8660-common
 # Build rom with 4.6
 TARGET_GCC_VERSION := 4.6
 
+# Assert minimum baseband version
+TARGET_BOARD_INFO_FILE ?= device/samsung/skyrocket/board-info.txt
+
 # cat /proc/emmc
 #dev:        size     erasesize name
 #mmcblk0p22: 00fffc00 00000200 "recovery"
