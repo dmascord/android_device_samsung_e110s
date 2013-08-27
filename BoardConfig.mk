@@ -40,9 +40,6 @@ TARGET_OTA_ASSERT_DEVICE := SGH-I727,skyrocket
 TARGET_KERNEL_CONFIG        := cyanogenmod_skyrocket_defconfig
 TARGET_KERNEL_SOURCE        := kernel/samsung/msm8660-common
 
-# Build rom with 4.6
-TARGET_GCC_VERSION := 4.6
-
 # Assert minimum baseband version
 TARGET_BOARD_INFO_FILE ?= device/samsung/skyrocket/board-info.txt
 
