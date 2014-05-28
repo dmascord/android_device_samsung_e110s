@@ -15,20 +15,25 @@
 #
 
 ## (2) Also get non-open-source specific aspects if available
-$(call inherit-product-if-exists, vendor/samsung/skyrocket/skyrocket-vendor.mk)
+$(call inherit-product-if-exists, vendor/samsung/e110s/e110s-vendor.mk)
 
 ## overlays
-DEVICE_PACKAGE_OVERLAYS += device/samsung/skyrocket/overlay
+DEVICE_PACKAGE_OVERLAYS += device/samsung/e110s/overlay
 
 # Ramdisk
 PRODUCT_COPY_FILES += \
-    device/samsung/skyrocket/ramdisk/init.qcom.usb.rc:root/init.qcom.usb.rc \
+    device/samsung/e110s/ramdisk/init.qcom.usb.rc:root/init.qcom.usb.rc \
 
 # BT firmware
 PRODUCT_COPY_FILES += \
-    device/samsung/skyrocket/firmware/bcm4330B1.hcd:system/etc/firmware/bcm4330B1.hcd
+    device/samsung/e110s/firmware/bcm4330B1.hcd:system/etc/firmware/bcm4330B1.hcd
+
+# Support for testing the baseband version
+PRODUCT_COPY_FILES += \
+        device/samsung/e110s/test_radio_version.sh:/system/etc/test_radio_version.sh
+
 
 # Inherit from celox-common
 $(call inherit-product, device/samsung/celox-common/celox-common.mk)
 
-$(call inherit-product-if-exists, vendor/samsung/skyrocket/skyrocket-vendor.mk)
+$(call inherit-product-if-exists, vendor/samsung/e110s/e110s-vendor.mk)

@@ -29,19 +29,19 @@ USE_CAMERA_STUB := true
 -include device/samsung/celox-common/BoardConfigCommon.mk
 
 # inherit from the proprietary version
--include vendor/samsung/skyrocket/BoardConfigVendor.mk
+-include vendor/samsung/e110s/BoardConfigVendor.mk
 
 TARGET_BOOTLOADER_BOARD_NAME := MSM8660_SURF
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := SGH-I727,skyrocket
+TARGET_OTA_ASSERT_DEVICE := SHV-E110S,e110s,skyrocket
 
 # Kernel
-TARGET_KERNEL_CONFIG        := cyanogenmod_skyrocket_defconfig
+TARGET_KERNEL_CONFIG        := cyanogenmod_e110s_defconfig
 TARGET_KERNEL_SOURCE        := kernel/samsung/msm8660-common
 
 # Assert minimum baseband version
-TARGET_BOARD_INFO_FILE ?= device/samsung/skyrocket/board-info.txt
+TARGET_BOARD_INFO_FILE ?= device/samsung/e110s/board-info.txt
 
 # cat /proc/emmc
 #dev:        size     erasesize name
@@ -58,5 +58,8 @@ BOARD_SYSTEMIMAGE_PARTITION_SIZE := 838860800
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 20044333056
 BOARD_FLASH_BLOCK_SIZE := 131072
 
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/samsung/skyrocket/bluetooth
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/samsung/e110s/bluetooth
+
+#twrp
+DEVICE_RESOLUTION := 480x800
 
